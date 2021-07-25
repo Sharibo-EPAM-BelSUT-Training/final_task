@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <title>TODO-ms — Sign Up</title>
+    <link rel="icon" href="/final_task/images/todo.ico" type="image/x-icon">
+    <link href="css/registration.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="form">
+    <form>
+        <legend>Sign Up</legend>
+        <hr/>
+
+        <fieldset>
+
+            <label for="email">E-mail:</label>
+            <input type="email" value="" class="form_input" id="email" name="email" autofocus
+                   data-required="true" data-validate_url="/validation/email" />
+
+            <label for="login">Login:</label>
+            <input type="text" value="" class="form_input" id="login" name="login"
+                   data-required="true" data-validate_url="/validation/login" />
+
+            <label for="password">Password:</label>
+            <input type="password" value="" class="form_input" id="password" name="password"
+                   autocomplete="off" data-required="true" data-validate_url="/ajax/validate/password/" data-validate_password="password2" />
+
+            <label for="password2">Repeat password:</label>
+            <input type="password" value="" class="form_input" id="password2" name="password2"
+                   autocomplete="off" data-required="true" data-validate_url="/ajax/validate/password/" data-validate_password="password" />
+
+            <input  type="submit" class="form_input" id="registration_button" value="Sign Up">
+
+        </fieldset>
+    </form>
+
+    <div id="down">
+        <a href="/final_task/login.html" target="_top" id="down_link">Already registered? Log In</a>
+    </div>
+</div>
+
+<div id="warn"></div>
+
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/registration.js"></script>
+
+</body>
+</html>

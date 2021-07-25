@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <title>TODO-ms — Log In</title>
+    <link rel="icon" href="/final_task/images/todo.ico" type="image/x-icon">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="form">
+    <form>
+        <legend>Log In</legend>
+        <hr/>
+
+        <fieldset>
+            <label for="login">Login:</label>
+            <input type="text" value="" class="form_input" id="login" name="login" autofocus
+                   data-required="true" />
+
+            <label for="password">Password:</label>
+            <input type="password" value="" class="form_input" id="password" name="password"
+                   autocomplete="off" data-required="true" />
+
+            <input  type="submit" class="form_input" id="login_button" value="Log In">
+
+        </fieldset>
+    </form>
+
+    <div id="down">
+        <a href="/final_task/registration.html" target="_top" id="down_link">Sign up</a>
+    </div>
+</div>
+
+<div id="warn">Wrong login or password!</div>
+
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+</html>

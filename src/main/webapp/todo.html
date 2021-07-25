@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <title>TODO-ms — List</title>
+    <link href="css/todo.css" rel="stylesheet">
+    <link rel="icon" href="/final_task/images/todo.ico" type="image/x-icon">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/todo.js"></script>
+</head>
+<body>
+
+<div id="container">
+
+    <hr id="hr_up"/>
+    <div id="up">
+
+    </div>
+    <hr id="hr_down"/>
+
+    <div id="middle">
+        <textarea id="message_input" name="message_input" maxlength="500" onkeydown="SendComment(event)"></textarea>
+    </div>
+
+    <div id="down">
+        <div id="down_left">
+
+            <div class="fileform">
+                <div id="fileformlabel"></div>
+                <div class="filebutton">File</div>
+                <input type="file" id="upload" name="upload" onchange="getFileName(this.value);" />
+            </div>
+
+        </div>
+
+        <div id="down_center">
+
+            <input type="button" id="someday_button" value="Someday" onclick="getSomedayNotes()">
+            <input type="button" id="today_button" value="Today" onclick="getTodayNotes()">
+            <input type="button" id="tomorrow_button" value="Tomorrow" onclick="getTomorrowNotes()">
+        </div>
+
+        <div id="down_right">
+            <input type="button" id="create_button" value="Create" onclick="createMessage()">
+        </div>
+    </div>
+
+</div>
+
+
+<div id="trash_button_container">
+    <button id="trash_button" onclick="getTrashBin()">
+        <img id="trash_img" src="images/Trash.svg" width="40px" height="40px" alt="Trash">
+    </button>
+</div>
+
+
+<div id="deleted_container">
+    <div id="deleted_buttons">
+        <button id="clearTrash_button" onclick="clearTrashBin()">
+            <img src="images/Delete.svg" width="30px" height="30px" alt="Trash">
+        </button>
+        <button id="closeTrash_button" onclick="closeTrashBin()">
+            <img src="images/CloseTrash.png" width="30px" height="30px" alt="Trash">
+        </button>
+    </div>
+
+    <hr id="deleted_hr_up"/>
+    <div id="deleted">
+
+    </div>
+    <hr id="deleted_hr_down"/>
+</div>
+
+<input type="button" id="logout_button" value="Log Out" onclick="exit()">
+
+</body>
+</html>

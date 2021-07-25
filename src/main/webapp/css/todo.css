@@ -1,0 +1,643 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    background-color: #e1d7bc;
+}
+
+
+#container {
+
+    height: calc(100% - 5% - 80px);
+    width: 760px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+
+    border-radius: 2px;
+    border-style: none;
+    padding: 20px 2% 10px 2%;
+
+    background-color: #f7f3df;
+}
+
+#hr_up {
+    height: 2px;
+    width: 100%;
+    border: none;
+    color: #74b0eb;
+    background-color: #74b0eb;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+#hr_down {
+    height: 2px;
+    width: 100%;
+    border: none;
+    color: #74b0eb;
+    background-color: #74b0eb;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+#up {
+    max-height: 100%;
+    height: 100%;
+    width: 760px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    /*for Firefox*/
+    scrollbar-color: #74b0eb transparent;
+    scrollbar-width: thin;
+
+    borde-style: none;
+
+    margin: 0 2% 0 2%;
+}
+
+.note_container_1 {
+    /*display: inline;*/
+    display: none;
+    width: 99%;
+    padding: 0;
+
+    border-radius: 4px;
+    margin-bottom: 7px;
+    background-color: #e1d7bc;
+}
+
+.note_container_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.note {
+    height: 100%;
+    width: calc(100% - 70px);
+
+    font-family: "Calibri", sans-serif;
+    font-weight: normal;
+    font-size: medium;
+    text-align: left;
+    word-wrap: break-word;
+
+    padding: 5px 10px 5px 10px;
+}
+
+
+
+.note_file_container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 3px 0 3px 0;
+
+    border-radius: 4px;
+    background-color: #e1d7bc;
+    transition: all .2s ease-out;
+}
+
+.note_file_container:hover {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #e1d7bc;
+    box-shadow: 0 0 3px 3px #c7bda2;
+}
+
+#img_note_file {
+    border: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 3px;
+}
+
+.note_file {
+    height: 100%;
+    width: calc(100% - 75px);
+
+    font-family: "Calibri", sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    text-align: left;
+    word-wrap: break-word;
+
+    padding: 5px 10px 5px 0;
+}
+
+#delete_file_button {
+    vertical-align: middle;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 8px 5px 8px 0;
+    background: transparent;
+    opacity: 0.4;
+    transition: all .2s ease-in;
+}
+
+#delete_file_button:hover {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+}
+
+.note_buttons {
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ok_button {
+    vertical-align: middle;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 5px 1px 5px 0;
+    background: transparent;
+    transition: all .2s ease-in;
+}
+
+.ok_button:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.inTrash_button {
+    vertical-align: middle;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 5px 0 5px 1px;
+    background: transparent;
+    transition: all .2s ease-in;
+}
+
+.inTrash_button:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.recycling_button {
+    vertical-align: middle;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 5px 1px 5px 0;
+    background: transparent;
+    transition: all .2s ease-in;
+}
+
+.recycling_button:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.delete_button {
+    vertical-align: middle;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 5px 0 5px 1px;
+    background: transparent;
+    transition: all .2s ease-in;
+}
+
+.delete_button:hover {
+    transform: scale(1.2, 1.2);
+}
+
+#middle {
+    height: 85px;
+    width: 760px;
+
+    border-radius: 5px;
+    border-style: none;
+
+    padding: 0px 2% 0px 2%;
+
+    background-color: #f7f3df;
+}
+
+#message_input {
+    height: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 50%;
+
+    outline: none;
+    resize: none;
+
+    border-radius: 4px;
+    border-style: solid;
+
+    font-family: "Calibri", sans-serif;
+    font-weight: normal;
+    font-size: medium;
+    color: #2265a8;
+    padding: 5px 10px 5px 10px;
+
+    /*for Firefox*/
+    scrollbar-color: #74b0eb transparent;
+    scrollbar-width: thin;
+}
+
+
+::-webkit-scrollbar { width: 8px; } /*ширина*/
+
+::-webkit-scrollbar-track { background: none; } /*фон*/
+
+::-webkit-scrollbar-thumb { background: #74b0eb; } /*ползунок*/
+
+::-webkit-scrollbar-thumb:hover { background: #287dcc; } /*ползунок при наведении*/
+
+::-webkit-scrollbar-button { display: none; } /*верхняя и нижняя кнопки*/
+
+#down {
+    height: 40px;
+    width: 760px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    border-style: none;
+}
+
+#down_left {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fileform {
+    background-color: #FFFFFF;
+    border: 1px solid #2265a8;
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    width: 184px;
+    height: 26px;
+    margin-top: 5px;
+}
+
+.filebutton {
+    background-color: #74b0eb;
+    border: none;
+    cursor: pointer;
+
+    font-family: "Calibri", sans-serif;
+    font-weight: normal;
+    font-size: medium;
+    color: #FFFFFF;
+    float: right;
+    padding: 3px 6px;
+    text-align: center;
+    vertical-align: middle;
+    width: 45px;
+}
+
+#upload{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width: 100%;
+}
+
+#fileformlabel {
+    background-color: #FFFFFF;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    padding: 2px;
+    text-align: left;
+    vertical-align: middle;
+    width: 120px;
+}
+
+
+#down_center {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#someday_button {
+    margin-left: 10px;
+    margin-right: 5px;
+    background-color: #FFFFFF;
+    border: 1px solid #2265a8;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 22px;
+    width: 27%;
+    height: 32px;
+    margin-top: 5px;
+
+    font-family: "Calibri", sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    color: #2265a8;
+}
+
+#today_button {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #FFFFFF;
+    border: 1px solid #2265a8;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 22px;
+    width: 27%;
+    height: 32px;
+    margin-top: 5px;
+
+    font-family: "Calibri", sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    color: #2265a8;
+}
+
+#tomorrow_button {
+    margin-left: 5px;
+    margin-right: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #2265a8;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 22px;
+    width: 27%;
+    height: 32px;
+    margin-top: 5px;
+
+    font-family: "Calibri", sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    color: #2265a8;
+}
+
+#down_right {
+    height: 100%;
+    width: 25%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#create_button {
+    background-color: #FFFFFF;
+    border: 1px solid #2265a8;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 22px;
+    width: 100%;
+    height: 32px;
+    margin-top: 5px;
+
+    font-family: "Calibri", sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    color: #2265a8;
+}
+
+
+#trash_button_container {
+    position: absolute;
+    bottom: 15px;
+
+    height: 40px;
+    width: 40px;
+    margin-top: -100px;
+    padding: 5px;
+    border-radius: 5px;
+
+    background-color: #f7f3df;
+    transition: all .2s ease-in;
+}
+
+#trash_button_container:hover {
+    transform: scale(1.15, 1.15);
+    box-shadow: crimson 0 0 6px;
+}
+
+#trash_button {
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 0 0 0 0;
+    background: transparent;
+}
+
+#deleted_container {
+    height: 380px;
+    width: 760px;
+    position: absolute;
+    bottom: -410px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 2px;
+    border-style: none;
+    padding: 5px 2% 10px 2%;
+
+    background-color: #f7f3df;
+    box-shadow: 0 0 10px 5px #cfccbb;
+
+    transition: bottom .6s ease-out;
+}
+
+#deleted_container.animate {
+    bottom: 15px;
+}
+
+#deleted_buttons {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#clearTrash_button {
+
+    border-radius: 30%;
+    border: none;
+    outline: none;
+    padding: 0 1px 0 0;
+    background: transparent;
+    transition: all .2s ease-in;
+}
+
+#clearTrash_button:hover {
+    transform: scale(1.15, 1.15);
+}
+
+#closeTrash_button {
+
+    border-radius: 30%;
+    border: none;
+    outline: none;
+    padding: 0 0 0 1px;
+    background: transparent;
+    transition: all .2s ease-in;
+}
+
+#closeTrash_button:hover {
+    transform: scale(1.15, 1.15);
+}
+
+#deleted_hr_up {
+    height: 2px;
+    width: 100%;
+    border: none;
+    color: #74b0eb;
+    background-color: #74b0eb;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+#deleted_hr_down {
+    height: 2px;
+    width: 100%;
+    border: none;
+    color: #74b0eb;
+    background-color: #74b0eb;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+#deleted {
+    max-height: 100%;
+    height: 100%;
+    width: 760px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    /*for Firefox*/
+    scrollbar-color: #74b0eb transparent;
+    scrollbar-width: thin;
+
+    borde-style: none;
+
+    margin: 0 2% 0 2%;
+
+    background-color: #f7f3df;
+}
+
+#logout_button {
+    width: 75px;
+    position: absolute;
+    top: 2%;
+    left: calc(100% - 120px);
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+
+    padding: 5px 3px 5px 3px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+
+    font-family: "Calibri", sans-serif;
+    font-style: normal;
+    font-size: medium;
+    background-color: #74b0eb;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    transition:  all .2s ease-out;
+}
+
+#logout_button:hover {
+    transform: scale(1.15, 1.15);
+    box-shadow: crimson 0 0 6px;
+}

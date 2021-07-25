@@ -1,0 +1,110 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #e1d7bc;
+}
+
+.form {
+    width: 460px;
+    border-radius: 2px;
+    padding: 60px 2% 25px 2%;
+
+    background-color: #f7f3df;
+}
+
+legend {
+    font-family: "Century Gothic", sans-serif;
+    font-size: xx-large;
+    color: #2265a8;
+    text-align: center;
+    text-shadow: #74b0eb 0px 0px 3px;
+}
+
+hr {
+    height: 3px;
+    width: 65%;
+    border: none;
+    color: #74b0eb;
+    background-color: #74b0eb;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    font-family: "Calibri", sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    color: #2265a8;
+    padding: 6px;
+}
+
+.form_input {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f7f3df;
+    border-style: solid;
+    border-color: #74b0eb;
+    border-radius: 4px;
+    font-family: "Calibri Light", sans-serif;
+    font-size: large;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#login_button {
+    background-color: #74b0eb;
+    color: #FFFFFF;
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+#down {
+    height: 35px;
+    width: 460px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#down_link {
+    font-family: "Calibri Light", sans-serif;
+    font-size: medium;
+}
+
+#warn {
+    display: none;
+    width: 250px;
+    position: absolute;
+    top: 58%;
+    left: calc(50% + 300px);
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+
+    padding: 10px 5px 10px 5px;
+    border-radius: 4px;
+    background-color: #f7f3df;
+
+    font-family: "Calibri Light", sans-serif;
+    font-style: normal;
+    font-size: larger;
+    color: crimson;
+}

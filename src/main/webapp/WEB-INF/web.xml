@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5">
+    <display-name>final_task</display-name>
+
+    <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>720</session-timeout> <!--12 часов-->
+    </session-config>
+
+    <servlet>    <!--здесь прописан путь к Java-классу-->
+        <servlet-name>Registration</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.Registration</servlet-class>
+    </servlet>
+    <servlet-mapping>    <!--здесь прописан путь к куску адресной строки, вызывающей сервлет-->
+        <servlet-name>Registration</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ValidEmail</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.validation.ValidEmail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidEmail</servlet-name>
+        <url-pattern>/validation/email</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ValidLoginR</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.validation.ValidLoginR</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidLoginR</servlet-name>
+        <url-pattern>/validation/login_r</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ValidPassword</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.validation.ValidPassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidPassword</servlet-name>
+        <url-pattern>/validation/password</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ValidLoginL</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.validation.ValidLoginL</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidLoginL</servlet-name>
+        <url-pattern>/validation/login_l</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IsSessionValid</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.IsSessionValid</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IsSessionValid</servlet-name>
+        <url-pattern>/TODO/session</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetNotes</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.GetNotes</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetNotes</servlet-name>
+        <url-pattern>/TODO/getNotes</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateNote</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.CreateNote</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateNote</servlet-name>
+        <url-pattern>/TODO/message</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetList</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.SetList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetList</servlet-name>
+        <url-pattern>/TODO/order</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetStatusOk</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.SetStatusOk</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetStatusOk</servlet-name>
+        <url-pattern>/TODO/statusOk</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetStatusInTrash</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.SetStatusInTrash</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetStatusInTrash</servlet-name>
+        <url-pattern>/TODO/statusInTrash</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetStatusToday</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.SetStatusToday</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetStatusToday</servlet-name>
+        <url-pattern>/TODO/statusToday</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteNote</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.DeleteNote</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteNote</servlet-name>
+        <url-pattern>/TODO/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteNoteFile</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.DeleteNoteFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteNoteFile</servlet-name>
+        <url-pattern>/TODO/deleteFile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClearTrash</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.ClearTrash</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClearTrash</servlet-name>
+        <url-pattern>/TODO/clearTrash</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CloseSession</servlet-name>
+        <servlet-class>gmail.alexejkrawez.app.servlets.todo.CloseSession</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CloseSession</servlet-name>
+        <url-pattern>/TODO/exit</url-pattern>
+    </servlet-mapping>
+
+</web-app>
